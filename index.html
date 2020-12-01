@@ -107,22 +107,7 @@
 						});
 
 
-					//sharkartwork
 
-					// loader.load(
-					// 	// resource URL
-					// 	'./textures/gallery_selingrak_-_sharks/scene.gltf',
-					// 	// called when the resource is loaded
-					// 	function ( gltf ) {
-					// 		var mesh = gltf.scene; // THREE.Group
-					// 		mesh.position.set(40, -3, 0);
-					//
-					// 		mesh.scale.set(1, 1, 1)
-					//
-					// 		scene.add( gltf.scene );
-					//
-					//
-					// 	});
 
 
 
@@ -223,7 +208,7 @@
 
 
 				});
-			//camera item and drone load
+			//props
 				loader.load(
 					// resource URL
 					'./textures/s9_mini_drone/scene.gltf',
@@ -271,6 +256,21 @@
 
 							});
 
+
+							loader.load(
+								// resource URL
+								'./textures/surfboard/scene.gltf',
+								// called when the resource is loaded
+								function ( gltf ) {
+									var mesh = gltf.scene; // THREE.Group
+									mesh.position.set(1, 10, 1);
+
+									mesh.scale.set(8, 8, 8)
+
+									scene.add( gltf.scene );
+
+
+								});
 
 			let camera, scene, renderer, controls;
 
@@ -416,7 +416,7 @@
 
       //art s
 
-				 var artTexture = new THREE.TextureLoader().load( './textures/art/drone1.jpg' );
+				 var artTexture = new THREE.TextureLoader().load( './textures/art/dog.jpg' );
 
 							 var artgeometry = new THREE.BoxBufferGeometry( 20, 40, 0 );
 							 var artmaterial = new THREE.MeshBasicMaterial( { map: artTexture } );
@@ -428,7 +428,7 @@
 							 scene.add( mesh1 );
 
 				//bigwall drone pic mid
-				 var artTexture2 = new THREE.TextureLoader().load( './textures/art/art2.jpg' );
+				 var artTexture2 = new THREE.TextureLoader().load( './textures/dog.jpg' );
 
 							 var artgeometry2 = new THREE.BoxBufferGeometry( 20, 40, 0 );
 							 var artmaterial2 = new THREE.MeshBasicMaterial( { map: artTexture2 } );
@@ -439,7 +439,7 @@
 							mesh2.rotation.y = Math.PI / 2;
 							 scene.add( mesh2 );
 
-							 var artTexture3 = new THREE.TextureLoader().load( './textures/art/drone2.jpg' );
+							 var artTexture3 = new THREE.TextureLoader().load( './textures/dog.jpg' );
 
 						 var artmaterial3 = new THREE.MeshBasicMaterial( { map: artTexture3 } );
 
@@ -449,7 +449,7 @@
 											, 15, 15);
 										mesh3.rotation.y = Math.PI / 2;
 										 scene.add( mesh3 );
-				var artTexture4 = new THREE.TextureLoader().load( './textures/art/drone3.jpg' );
+				var artTexture4 = new THREE.TextureLoader().load( './textures/dog.jpg' );
 
 				var artmaterial4 = new THREE.MeshBasicMaterial( { map: artTexture4 } );
 
