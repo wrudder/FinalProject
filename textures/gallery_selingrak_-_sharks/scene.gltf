@@ -1,0 +1,337 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 52960,
+      "max": [
+        11.144918441772461,
+        7.8503427505493164,
+        9.6705703735351562
+      ],
+      "min": [
+        -10.094820022583008,
+        -8.0194473266601562,
+        3.561856746673584
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 635520,
+      "componentType": 5126,
+      "count": 52960,
+      "max": [
+        0.99986523389816284,
+        0.99999064207077026,
+        0.99999994039535522
+      ],
+      "min": [
+        -0.99995887279510498,
+        -0.99999529123306274,
+        -0.99993467330932617
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 52960,
+      "max": [
+        0.99993133544921875,
+        0.99996405839920044,
+        0.99996793270111084,
+        1
+      ],
+      "min": [
+        -0.99999982118606567,
+        -0.99993902444839478,
+        -0.99998170137405396,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 52960,
+      "max": [
+        0.98600798845291138,
+        0.99894934892654419
+      ],
+      "min": [
+        0.0010359300067648292,
+        0.0013508773408830166
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 423680,
+      "componentType": 5126,
+      "count": 52960,
+      "max": [
+        0.98600798845291138,
+        0.99894934892654419
+      ],
+      "min": [
+        0.0010359300067648292,
+        0.0013508773408830166
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 299730,
+      "max": [
+        52959
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "3dhdscan (https://sketchfab.com/3dhdscan)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/gallery-selingrak-sharks-7e65d52680874d109df30af789ffd8c2",
+      "title": "Gallery Selingrak - Sharks"
+    },
+    "generator": "Sketchfab-5.48.2",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1198920,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 847360,
+      "byteOffset": 1198920,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1271040,
+      "byteOffset": 2046280,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 847360,
+      "byteOffset": 3317320,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 4164680,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/selingrak_zraloci_100K_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/selingrak_zraloci_100K_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/selingrak_zraloci_100K_normal.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": false,
+      "name": "selingrak_zraloci_100K",
+      "normalTexture": {
+        "index": 2,
+        "scale": 0.71512957320000003,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 1,
+        "strength": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "metallicRoughnessTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "roughnessFactor": 1
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "selingrak_zraloci_100K_selingrak_zraloci_100K_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.99958205223083496,
+        0,
+        -0.028908303007483482,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.028908303007483482,
+        0,
+        0.99958205223083496,
+        0,
+        -0.19104424118995667,
+        0,
+        0.01794392429292202,
+        1
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "selingrak_zraloci_100K.FBX"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2.2204460492503131e-16,
+        -1,
+        0,
+        0,
+        1,
+        2.2204460492503131e-16,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "selingrak_zraloci_100K"
+    },
+    {
+      "mesh": 0,
+      "name": "selingrak_zraloci_100K_selingrak_zraloci_100K_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
+
