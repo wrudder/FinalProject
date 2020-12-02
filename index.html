@@ -70,6 +70,31 @@
 
 			const loader = new GLTFLoader();
 
+			THREE.DefaultLoadingManager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+
+console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+
+};
+
+THREE.DefaultLoadingManager.onLoad = function ( ) {
+
+console.log( 'Loading Complete!');
+
+};
+
+
+THREE.DefaultLoadingManager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+
+console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+
+};
+
+THREE.DefaultLoadingManager.onError = function ( url ) {
+
+console.log( 'There was an error loading ' + url );
+
+};
+
 				//main right photo
 				//modern pic frame
 			loader.load(
@@ -112,6 +137,7 @@
 						});
 
 
+
 					//house
 
 					loader.load(
@@ -121,7 +147,7 @@
 						function ( gltf ) {
 							var mesh = gltf.scene; // THREE.Group
 							mesh.position.set(0, 1, 0);
-
+							mesh.renderOrder = 0;
 							mesh.scale.set(0.2, 0.2, 0.2)
 
 							scene.add( gltf.scene );
@@ -233,6 +259,24 @@
 							});
 
 
+							loader.load(
+								// resource URL
+								'./textures/wall_frame_paspatur/scene.gltf',
+								// called when the resource is loaded
+								function ( gltf ) {
+									var mesh = gltf.scene; // THREE.Group
+									mesh.position.set(79, 15, -54.3);
+									mesh.rotation.y = Math.PI;
+									mesh.rotation.x = Math.PI;
+									mesh.rotation.z = Math.PI/2;
+									mesh.scale.set(7, 9, 2)
+
+									scene.add( gltf.scene );
+
+
+								});
+
+
 			//vines
 				loader.load(
 				// resource URL
@@ -255,7 +299,7 @@
 					// called when the resource is loaded
 					function ( gltf ) {
 						var mesh = gltf.scene; // THREE.Group
-						mesh.position.set(35, 5, 1);
+						mesh.position.set(-26, 5, 1);
 						mesh.rotation.y = 1.2;
 						mesh.scale.set(0.8, 0.8, 0.8)
 
@@ -271,7 +315,7 @@
 						// called when the resource is loaded
 						function ( gltf ) {
 							var mesh = gltf.scene; // THREE.Group
-							mesh.position.set(29, 4, 1);
+							mesh.position.set(-20, 4, 1);
 							mesh.rotation.y = 0.6;
 							mesh.scale.set(0.2, 0.2, 0.2)
 
@@ -283,11 +327,42 @@
 
 						loader.load(
 							// resource URL
+							'./textures/gleason_ottoman/scene.gltf',
+							// called when the resource is loaded
+							function ( gltf ) {
+								var mesh = gltf.scene; // THREE.Group
+								mesh.position.set(23, 3.7, 2);
+								// mesh.rotation.y = Math.PI - 10
+								mesh.scale.set(7, 3, 9)
+
+								scene.add( gltf.scene );
+
+
+							});
+
+							loader.load(
+								// resource URL
+								'./textures/carpet/scene.gltf',
+								// called when the resource is loaded
+								function ( gltf ) {
+									var mesh = gltf.scene; // THREE.Group
+									mesh.position.set(35, -1.8, 2);
+
+									mesh.scale.set(0.4, 0.3, 0.5)
+
+									scene.add( gltf.scene );
+
+
+								});
+
+
+						loader.load(
+							// resource URL
 							'./textures/table_ronde/scene.gltf',
 							// called when the resource is loaded
 							function ( gltf ) {
 								var mesh = gltf.scene; // THREE.Group
-								mesh.position.set(33, 1, 1);
+								mesh.position.set(-26, 1, 1);
 
 								mesh.scale.set(0.07, 0.07, 0.07)
 
@@ -312,6 +387,8 @@
 
 
 								});
+
+
 
 			let camera, scene, renderer, controls;
 
@@ -476,7 +553,7 @@
 
 							 var mesh2 = new THREE.Mesh( artgeometry2, artmaterial2 );
 							mesh2.scale.set(0.38,0.25,0.5)
-							mesh2.position.set(-33.5, 15, 1.5);
+							mesh2.position.set(-34, 15, 1.5);
 							mesh2.rotation.y = Math.PI / 2;
 							 scene.add( mesh2 );
 
@@ -510,9 +587,19 @@
 
 				var mesh4 = new THREE.Mesh( artgeometry2, artmaterial5 );
 				 mesh4.scale.set(0.422,0.266,0.5)
-				 mesh4.position.set(-2.23, 15.4, 58.44);
+				 mesh4.position.set(-2.25, 15.4, 58.49);
 
 					scene.add( mesh4 );
+
+					var artTexture5pair = new THREE.TextureLoader().load( './textures/art/backwallmin.jpg' );
+
+					var artmaterial5pair = new THREE.MeshBasicMaterial( { map: artTexture5pair } );
+
+					var mesh9 = new THREE.Mesh( artgeometry2, artmaterial5pair );
+					 mesh9.scale.set(0.422,0.266,0.5)
+					 mesh9.position.set(20.75, 15.4, 58.49);
+
+						scene.add( mesh9 );
 
 
 					//landscape backright
@@ -527,6 +614,45 @@
 	 				mesh5.rotation.z = 180 * Math.PI/180;
 
 						scene.add( mesh5 );
+
+					//big landscape
+						var artTexture7 = new THREE.TextureLoader().load( './textures/art/landscape4.jpg' );
+
+						var artmaterial7 = new THREE.MeshBasicMaterial( { map: artTexture7 } );
+
+					var mesh6 = new THREE.Mesh( artgeometry2, artmaterial7 )
+						mesh6.scale.set(0.9,0.27,0)
+						mesh6.position.set(79, 15, -54.3);
+
+					 // mesh6.rotation.z = 180 * Math.PI/180;
+
+						 scene.add( mesh6 );
+
+
+					//front wall
+					var artTexture8 = new THREE.TextureLoader().load( './textures/art/sunset1min.jpg' );
+
+					var artmaterial8 = new THREE.MeshBasicMaterial( { map: artTexture8 } );
+
+					var mesh7 = new THREE.Mesh( artgeometry2, artmaterial8 )
+
+					mesh7.scale.set(0.422,0.266,0.5)
+					mesh7.position.set(4, 15, -53.9);
+
+					 scene.add( mesh7 );
+
+					 var artTexture9 = new THREE.TextureLoader().load( './textures/art/sunset2min.jpg' );
+
+					 var artmaterial9 = new THREE.MeshBasicMaterial( { map: artTexture9 } );
+
+					 var mesh8 = new THREE.Mesh( artgeometry2, artmaterial9 )
+
+					 mesh8.scale.set(0.422,0.266,0.5)
+					 mesh8.position.set(15, 15, -53.9);
+
+
+
+						scene.add( mesh8 );
 
 				//light
 		var directionalLight = new THREE.DirectionalLight(0xEED5D2, 2);
@@ -605,6 +731,61 @@
 
 				scene.add(spotLightWall5)
 
+
+				var spotLightWall6 = new THREE.SpotLight(0xF6CD8B, 2, 100);
+				spotLightWall6.position.set( 60, 15, -15 );
+
+				spotLightWall6.angle = Math.PI / 4;
+				spotLightWall6.penumbra = 0.70;
+				spotLightWall6.decay = 2;
+				spotLightWall6.distance = 131;
+
+				spotLightWall6.castShadow = true;
+				spotLightWall6.shadow.mapSize.width = 512;
+				spotLightWall6.shadow.mapSize.height = 512;
+				spotLightWall6.shadow.camera.near = 10;
+				spotLightWall6.shadow.camera.far = 200;
+				spotLightWall6.shadow.focus = 0.3;
+				spotLightWall6.target = mesh6
+
+				scene.add(spotLightWall6)
+
+
+				var spotLightWall7 = new THREE.SpotLight(0xF6CD8B, 2, 100);
+				spotLightWall7.position.set( 2, 15, -15 );
+
+				spotLightWall7.angle = Math.PI / 4;
+				spotLightWall7.penumbra = 0.70;
+				spotLightWall7.decay = 2;
+				spotLightWall7.distance = 131;
+
+				spotLightWall7.castShadow = true;
+				spotLightWall7.shadow.mapSize.width = 512;
+				spotLightWall7.shadow.mapSize.height = 512;
+				spotLightWall7.shadow.camera.near = 10;
+				spotLightWall7.shadow.camera.far = 200;
+				spotLightWall7.shadow.focus = 0.3;
+				spotLightWall7.target = mesh8
+
+				scene.add(spotLightWall7)
+
+				var spotLightWall8 = new THREE.SpotLight(0xF6CD8B, 2, 100);
+				spotLightWall8.position.set( 2, 15, 15 );
+
+				spotLightWall8.angle = Math.PI / 4;
+				spotLightWall8.penumbra = 0.70;
+				spotLightWall8.decay = 2;
+				spotLightWall8.distance = 131;
+
+				spotLightWall8.castShadow = true;
+				spotLightWall8.shadow.mapSize.width = 512;
+				spotLightWall8.shadow.mapSize.height = 512;
+				spotLightWall8.shadow.camera.near = 10;
+				spotLightWall8.shadow.camera.far = 200;
+				spotLightWall8.shadow.focus = 0.3;
+				spotLightWall8.target = mesh9
+
+				scene.add(spotLightWall8)
 			}
 
 			function onWindowResize() {

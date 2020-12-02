@@ -1,0 +1,389 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 9255,
+      "max": [
+        510.74139404296875,
+        127.11637115478516,
+        201.00138854980469
+      ],
+      "min": [
+        -101.81739807128906,
+        -102.42608642578125,
+        -16.427783966064453
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 111060,
+      "componentType": 5126,
+      "count": 9255,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 9255,
+      "max": [
+        1,
+        1,
+        0.99999672174453735,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -0.99999886751174927,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 9255,
+      "max": [
+        0.99228405952453613,
+        0.99408805370330811
+      ],
+      "min": [
+        0.016643175855278969,
+        0.017084253951907158
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 74040,
+      "componentType": 5126,
+      "count": 9255,
+      "max": [
+        0.99228405952453613,
+        0.99408805370330811
+      ],
+      "min": [
+        0.016643175855278969,
+        0.017084253951907158
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 148080,
+      "componentType": 5126,
+      "count": 9255,
+      "max": [
+        0.99228405952453613,
+        0.99408805370330811
+      ],
+      "min": [
+        0.016643175855278969,
+        0.017084253951907158
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 47928,
+      "max": [
+        9254
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "MisamAliRizvi (https://sketchfab.com/MisamAliRizvi)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/sofa-set-version-03-f03cf5b887364fb6b401966b9e8d87ac",
+      "title": "Sofa Set_Version_03"
+    },
+    "generator": "Sketchfab-8.33.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 191712,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 222120,
+      "byteOffset": 191712,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 222120,
+      "byteOffset": 413832,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 148080,
+      "byteOffset": 635952,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 784032,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/Sofa_Set_Version_03_diffuse.jpeg"
+    },
+    {
+      "uri": "textures/Sofa_Set_Version_03_specularGlossiness.png"
+    },
+    {
+      "uri": "textures/Sofa_Set_Version_03_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "diffuseTexture": {
+            "index": 0,
+            "texCoord": 0
+          },
+          "glossinessFactor": 1,
+          "specularFactor": [
+            0.14155403145881595,
+            0.14155403145881595,
+            0.14155403145881595
+          ],
+          "specularGlossinessTexture": {
+            "index": 1,
+            "texCoord": 0
+          }
+        }
+      },
+      "name": "Sofa_Set_Version_03",
+      "normalTexture": {
+        "index": 2,
+        "scale": 0.25171493902439024,
+        "texCoord": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Sofa Set_Version_03_Sofa Set_Version_03_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4,
+            "TEXCOORD_2": 5
+          },
+          "indices": 6,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1,
+        -2.832769343193999e-16,
+        2.832769343193999e-16,
+        0,
+        -2.832769343193999e-16,
+        -1,
+        -3.1450057482662597e-32,
+        0,
+        2.832769343193999e-16,
+        -4.8795769672831353e-32,
+        -1,
+        0,
+        2.7763056610619063e-14,
+        97.23309326171875,
+        -98.780181884765625,
+        1
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "5679ae5ea6334e52acac656d9a954c5b.fbx"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        0.45431011915206909,
+        0,
+        0,
+        0,
+        0,
+        0.45431011915206909,
+        0,
+        0,
+        0,
+        0,
+        0.45431011915206909,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "Sofa Set_Version_03"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        1,
+        0,
+        -0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -204.46199035644531,
+        -119.35694885253906,
+        16.427780151367188,
+        1
+      ],
+      "name": ""
+    },
+    {
+      "mesh": 0,
+      "name": "Sofa Set_Version_03_Sofa Set_Version_03_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
+
