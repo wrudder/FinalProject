@@ -70,23 +70,46 @@
 
 			const loader = new GLTFLoader();
 
-
+				//main right photo
+				//modern pic frame
 			loader.load(
 				// resource URL
-				'./textures/picture_frame/scene.gltf',
+				'./textures/picture_frame_-_emapale_enmarcate/scene.gltf',
 				// called when the resource is loaded
 				function ( gltf ) {
 					var mesh = gltf.scene; // THREE.Group
-					mesh.position.set(90, -2.5, 1);
-					mesh.scale.set(2.4, 3.4, 0.8)
-					mesh.rotation.y = Math.PI / 2;
+					mesh.position.set(100.5, 1.5, -3.1);
+					mesh.scale.set(7, 7, 7)
+					mesh.rotation.y = Math.PI;
 					scene.add( gltf.scene );
 
 
 				});
 
 
+						//modern frame
+				loader.load(
+					'./textures/picture_frame_-_emapale_enmarcate/scene.gltf',
+					function ( gltf ) {
+						var mesh = gltf.scene; // THREE.Group
+						mesh.position.set(2, 2, 58.5);
+						mesh.scale.set(6, 6, 6)
+						mesh.rotation.y = Math.PI / 2;
+						scene.add( gltf.scene );
 
+
+					});
+					loader.load(
+						'./textures/picture_frame_-_emapale_enmarcate/scene.gltf',
+						function ( gltf ) {
+							var mesh = gltf.scene; // THREE.Group
+							mesh.position.set(25, 2, 58.5);
+							mesh.scale.set(6, 6, 6)
+							mesh.rotation.y = Math.PI / 2;
+							scene.add( gltf.scene );
+
+
+						});
 
 
 					//house
@@ -191,6 +214,23 @@
 
 
 						});
+						 //landscape back right frame
+						loader.load(
+							// resource URL
+							'./textures/wall_frame_paspatur/scene.gltf',
+							// called when the resource is loaded
+							function ( gltf ) {
+								var mesh = gltf.scene; // THREE.Group
+								mesh.position.set(70, 15, 58.5);
+								mesh.rotation.y = Math.PI;
+								mesh.rotation.x = Math.PI * 2;
+								mesh.rotation.z = Math.PI/2;
+								mesh.scale.set(5, 8, 6)
+
+								scene.add( gltf.scene );
+
+
+							});
 
 
 			//vines
@@ -263,8 +303,9 @@
 								// called when the resource is loaded
 								function ( gltf ) {
 									var mesh = gltf.scene; // THREE.Group
-									mesh.position.set(1, 10, 1);
-
+									mesh.position.set(-10, 9, 57);
+									mesh.rotation.y = Math.PI/2 ;
+									mesh.rotation.x = - Math.PI/2 -3;
 									mesh.scale.set(8, 8, 8)
 
 									scene.add( gltf.scene );
@@ -415,20 +456,20 @@
 
 
       //art s
-
-				 var artTexture = new THREE.TextureLoader().load( './textures/art/dog.jpg' );
+		//main right photo
+				 var artTexture = new THREE.TextureLoader().load( './textures/art/master.jpg' );
 
 							 var artgeometry = new THREE.BoxBufferGeometry( 20, 40, 0 );
 							 var artmaterial = new THREE.MeshBasicMaterial( { map: artTexture } );
 
 							 var mesh1 = new THREE.Mesh( artgeometry, artmaterial );
-							mesh1.scale.set(0.41,0.29,0.5)
-							mesh1.position.set(98.5, 15, 1);
+							mesh1.scale.set(0.43,0.29,0.5)
+							mesh1.position.set(100.4, 17.1, 1.84);
 							mesh1.rotation.y = Math.PI / 2;
 							 scene.add( mesh1 );
 
 				//bigwall drone pic mid
-				 var artTexture2 = new THREE.TextureLoader().load( './textures/dog.jpg' );
+				 var artTexture2 = new THREE.TextureLoader().load( './textures/art/lagos.jpg' );
 
 							 var artgeometry2 = new THREE.BoxBufferGeometry( 20, 40, 0 );
 							 var artmaterial2 = new THREE.MeshBasicMaterial( { map: artTexture2 } );
@@ -439,7 +480,7 @@
 							mesh2.rotation.y = Math.PI / 2;
 							 scene.add( mesh2 );
 
-							 var artTexture3 = new THREE.TextureLoader().load( './textures/dog.jpg' );
+							 var artTexture3 = new THREE.TextureLoader().load( './textures/art/surf.jpg' );
 
 						 var artmaterial3 = new THREE.MeshBasicMaterial( { map: artTexture3 } );
 
@@ -449,39 +490,66 @@
 											, 15, 15);
 										mesh3.rotation.y = Math.PI / 2;
 										 scene.add( mesh3 );
-				var artTexture4 = new THREE.TextureLoader().load( './textures/dog.jpg' );
+				var artTexture4 = new THREE.TextureLoader().load( './textures/art/small2.jpg' );
 
 				var artmaterial4 = new THREE.MeshBasicMaterial( { map: artTexture4 } );
 
 				var mesh4 = new THREE.Mesh( artgeometry2, artmaterial4 );
 			 mesh4.scale.set(0.38,0.25,0.5)
-			 mesh4.position.set(-34
-				 , 15, -12.3);
+			 mesh4.position.set(-34, 15, -12.3);
 			 mesh4.rotation.y = Math.PI / 2;
 				scene.add( mesh4 );
 
+
+
+				//behind wall
+
+				var artTexture5 = new THREE.TextureLoader().load( './textures/art/watershot.jpg' );
+
+				var artmaterial5 = new THREE.MeshBasicMaterial( { map: artTexture5 } );
+
+				var mesh4 = new THREE.Mesh( artgeometry2, artmaterial5 );
+				 mesh4.scale.set(0.422,0.266,0.5)
+				 mesh4.position.set(-2.23, 15.4, 58.44);
+
+					scene.add( mesh4 );
+
+
+					//landscape backright
+
+					var artTexture6 = new THREE.TextureLoader().load( './textures/art/landscape3.jpg' );
+
+					var artmaterial6 = new THREE.MeshBasicMaterial( { map: artTexture6 } );
+					var mesh5 = new THREE.Mesh( artgeometry2, artmaterial6 );
+					 mesh5.scale.set(0.76,0.18,0)
+					 mesh5.position.set(70, 15, 58.5);
+
+	 				mesh5.rotation.z = 180 * Math.PI/180;
+
+						scene.add( mesh5 );
+
 				//light
-				var directionalLight = new THREE.DirectionalLight(0xEED5D2, 2);
-				directionalLight.position.set(0, 5, 0);
-				scene.add(directionalLight)
+		var directionalLight = new THREE.DirectionalLight(0xEED5D2, 2);
+					directionalLight.position.set(0, 5, 0);
+					scene.add(directionalLight)
 
 
-				var spotLightBigWall1 = new THREE.SpotLight(0xF6CD8B, 2, 100);
-				spotLightBigWall1.position.set( 0, 15, 15 );
+					var spotLightBigWall1 = new THREE.SpotLight(0xF6CD8B, 2, 100);
+					spotLightBigWall1.position.set( 0, 15, 15 );
 
-				spotLightBigWall1.angle = Math.PI / 4;
-				spotLightBigWall1.penumbra = 0.70;
-				spotLightBigWall1.decay = 2;
-				spotLightBigWall1.distance = 131;
+					spotLightBigWall1.angle = Math.PI / 4;
+					spotLightBigWall1.penumbra = 0.70;
+					spotLightBigWall1.decay = 2;
+					spotLightBigWall1.distance = 131;
 
-				spotLightBigWall1.castShadow = true;
-				spotLightBigWall1.shadow.mapSize.width = 512;
-				spotLightBigWall1.shadow.mapSize.height = 512;
-				spotLightBigWall1.shadow.camera.near = 10;
-				spotLightBigWall1.shadow.camera.far = 200;
-				spotLightBigWall1.shadow.focus = 0.3;
-				spotLightBigWall1.target = mesh2
-				scene.add(spotLightBigWall1)
+					spotLightBigWall1.castShadow = true;
+					spotLightBigWall1.shadow.mapSize.width = 512;
+					spotLightBigWall1.shadow.mapSize.height = 512;
+					spotLightBigWall1.shadow.camera.near = 10;
+					spotLightBigWall1.shadow.camera.far = 200;
+					spotLightBigWall1.shadow.focus = 0.3;
+					spotLightBigWall1.target = mesh2
+					scene.add(spotLightBigWall1)
 
 
 				var spotLight2portrait = new THREE.SpotLight(0xF6CD8B, 2, 100);
@@ -501,6 +569,41 @@
 				spotLight2portrait.target = mesh1
 				scene.add(spotLight2portrait)
 
+				var spotLightWall3 = new THREE.SpotLight(0xF6CD8B, 2, 100);
+				spotLightWall3.position.set( 0, 15, 15 );
+
+				spotLightWall3.angle = Math.PI / 4;
+				spotLightWall3.penumbra = 0.70;
+				spotLightWall3.decay = 2;
+				spotLightWall3.distance = 131;
+
+				spotLightWall3.castShadow = true;
+				spotLightWall3.shadow.mapSize.width = 512;
+				spotLightWall3.shadow.mapSize.height = 512;
+				spotLightWall3.shadow.camera.near = 10;
+				spotLightWall3.shadow.camera.far = 200;
+				spotLightWall3.shadow.focus = 0.3;
+				spotLightWall3.target = mesh4
+				console.log(mesh4)
+				scene.add(spotLightWall3)
+
+				var spotLightWall5 = new THREE.SpotLight(0xF6CD8B, 2, 100);
+				spotLightWall5.position.set( 60, 15, 15 );
+
+				spotLightWall5.angle = Math.PI / 4;
+				spotLightWall5.penumbra = 0.70;
+				spotLightWall5.decay = 2;
+				spotLightWall5.distance = 131;
+
+				spotLightWall5.castShadow = true;
+				spotLightWall5.shadow.mapSize.width = 512;
+				spotLightWall5.shadow.mapSize.height = 512;
+				spotLightWall5.shadow.camera.near = 10;
+				spotLightWall5.shadow.camera.far = 200;
+				spotLightWall5.shadow.focus = 0.3;
+				spotLightWall5.target = mesh5
+
+				scene.add(spotLightWall5)
 
 			}
 
