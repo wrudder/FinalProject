@@ -69,6 +69,12 @@
 			import { Sky } from './lib/Sky.js';
 
 			const loader = new GLTFLoader();
+     //text
+
+
+const fontloader = new THREE.FontLoader();
+
+
 
 		 //load logs
 					THREE.DefaultLoadingManager.onStart = function ( url, itemsLoaded, itemsTotal ) {
@@ -107,8 +113,8 @@
 				// called when the resource is loaded
 				function ( gltf ) {
 					var mesh = gltf.scene; // THREE.Group
-					mesh.position.set(100.5, 1.5, -3.1);
-					mesh.scale.set(7, 7, 7)
+					mesh.position.set(100.5, -0.805, -3.18);
+					mesh.scale.set(7, 7.9, 7.1)
 					mesh.rotation.y = Math.PI;
 					scene.add( gltf.scene );
 
@@ -251,11 +257,11 @@
 							// called when the resource is loaded
 							function ( gltf ) {
 								var mesh = gltf.scene; // THREE.Group
-								mesh.position.set(70, 15, 58.5);
+								mesh.position.set(75, 15, 58.5);
 								mesh.rotation.y = Math.PI;
 								mesh.rotation.x = Math.PI * 2;
 								mesh.rotation.z = Math.PI/2;
-								mesh.scale.set(5, 8, 6)
+								mesh.scale.set(6, 9, 6)
 
 								scene.add( gltf.scene );
 
@@ -436,8 +442,9 @@
 				instructions.addEventListener( 'click', function () {
 					if (loaded === true)  {
 					controls.lock();
-}
+					}
 				}, false );
+
 
 				controls.addEventListener( 'lock', function () {
 
@@ -547,8 +554,8 @@
 							 var artmaterial = new THREE.MeshBasicMaterial( { map: artTexture } );
 
 							 var mesh1 = new THREE.Mesh( artgeometry, artmaterial );
-							mesh1.scale.set(0.43,0.29,0.5)
-							mesh1.position.set(100.4, 17.1, 1.84);
+							mesh1.scale.set(0.5,0.35,0.5)
+							mesh1.position.set(100.4, 16.8, 1.84);
 							mesh1.rotation.y = Math.PI / 2;
 							 scene.add( mesh1 );
 
@@ -611,12 +618,12 @@
 
 					//landscape backright
 
-					var artTexture6 = new THREE.TextureLoader().load( './textures/art/landscape3.jpg' );
+					var artTexture6 = new THREE.TextureLoader().load( './textures/art/ls.jpg' );
 
 					var artmaterial6 = new THREE.MeshBasicMaterial( { map: artTexture6 } );
 					var mesh5 = new THREE.Mesh( artgeometry, artmaterial6 );
-					 mesh5.scale.set(0.76,0.18,0)
-					 mesh5.position.set(70, 15, 58.5);
+					 mesh5.scale.set(0.96,0.25,0)
+					 mesh5.position.set(75, 15, 58.5);
 
 	 				mesh5.rotation.z = 180 * Math.PI/180;
 
@@ -643,7 +650,7 @@
 
 					var mesh7 = new THREE.Mesh( artgeometry, artmaterial8 )
 
-					mesh7.scale.set(0.422,0.266,0.5)
+					mesh7.scale.set(0.422,0.269,0.5)
 					mesh7.position.set(4, 15, -53.9);
 
 					 scene.add( mesh7 );
@@ -654,7 +661,7 @@
 
 					 var mesh8 = new THREE.Mesh( artgeometry, artmaterial9 )
 
-					 mesh8.scale.set(0.422,0.266,0.5)
+					 mesh8.scale.set(0.422,0.269,0.5)
 					 mesh8.position.set(15, 15, -53.9);
 
 
@@ -663,7 +670,7 @@
 
 				//light
 		var directionalLight = new THREE.DirectionalLight(0xEED5D2, 2);
-					directionalLight.position.set(0, 5, 0);
+					directionalLight.position.set(0, 10, 0);
 					scene.add(directionalLight)
 
 
